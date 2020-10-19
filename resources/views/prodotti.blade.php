@@ -121,7 +121,8 @@
     "descrizione": "Altro elemento cult della famiglia de lo Spaghetto Quadrato (N.1 Spaghetto Quadrato. Una new entry che sarà molto apprezzata sia dai consumatori che dagli chef, perché il Ditale Quadrato è un formato deliziosamente piccolo ma sostanzioso.<br>A dispetto del nome che fa pensare ad una pastina è un formato di pasta assolutamente versatile, adatto a moltissime ricette di primi piatti.<br>La sua consistenza soda si sprigiona in bocca con un\'esplosione di emozioni, grazie agli spessori corposi, al colore elegantemente ambrato, alla texture delicatamente ruvida, cangiante e piacevolissima al tatto che trattiene il condimento sulla superficie.<br>Il Ditale Quadrato sembra ideale per preparazioni strutturate come la ricetta con crema di broccoletto siciliano, calamari e pomodori semi secchi profumata al limone e carbone d\'olive nere."
   }
   ]';
-  $data = json_decode($data, true)
+
+  $data = json_decode($data, true);
   $lunga = [];
   $corta = [];
   $cortissima = [];
@@ -138,16 +139,38 @@
   }
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
-  </head>
+    <title>molisana</title>
   <body>
-
+    <h1>Le Lunghe</h1>
+    <ul>
+    <?php foreach ($lunga as $pasta): ?>
+      <li>
+        <img src="{{$pasta["src"]}}" alt="">
+        <h4>{{$pasta["titolo"]}}</h4>
+      </li>
+    <?php endforeach; ?>
+    </ul>
+    <h1>Le Corte</h1>
+    <ul>
+    <?php foreach ($corta as $pasta): ?>
+      <li>
+        <img src="{{$pasta["src"]}}" alt="">
+        <h4>{{$pasta["titolo"]}}</h4>
+      </li>
+    <?php endforeach; ?>
+    </ul>
+    <h1>Le Cortissime</h1>
+    <ul>
+    <?php foreach ($cortissima as $pasta): ?>
+      <li>
+        <img src="{{$pasta["src"]}}" alt="">
+        <h4>{{$pasta["titolo"]}}</h4>
+      </li>
+    <?php endforeach; ?>
+    </ul>
   </body>
 </html>
