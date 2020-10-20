@@ -29,9 +29,9 @@ foreach ($data as $pasta) {
       </div>
       <div class="header-nav">
         <ul class="nav-list">
-          <li></li>
-          <li></li>
-          <li></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">PRODOTTI</a></li>
+          <li><a href="#">NEWS</a></li>
         </ul>
       </div>
     </header>
