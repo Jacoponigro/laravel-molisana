@@ -1,4 +1,5 @@
-<?php
+<!-- API -->
+@php
  $data = '[
   {
     "src": "https://www.lamolisana.it/wp-content/uploads/2017/06/4-spaghetto-quadrato-bucato-m.jpg",
@@ -137,40 +138,48 @@
       $cortissima[] = $pasta;
     }
   }
-?>
+@endphp
+<!-- /API -->
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>molisana</title>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
   <body>
-    <h1>Le Lunghe</h1>
-    <ul>
-    <?php foreach ($lunga as $pasta): ?>
-      <li>
-        <img src="{{$pasta["src"]}}" alt="">
-        <h4>{{$pasta["titolo"]}}</h4>
-      </li>
-    <?php endforeach; ?>
-    </ul>
-    <h1>Le Corte</h1>
-    <ul>
-    <?php foreach ($corta as $pasta): ?>
-      <li>
-        <img src="{{$pasta["src"]}}" alt="">
-        <h4>{{$pasta["titolo"]}}</h4>
-      </li>
-    <?php endforeach; ?>
-    </ul>
-    <h1>Le Cortissime</h1>
-    <ul>
-    <?php foreach ($cortissima as $pasta): ?>
-      <li>
-        <img src="{{$pasta["src"]}}" alt="">
-        <h4>{{$pasta["titolo"]}}</h4>
-      </li>
-    <?php endforeach; ?>
-    </ul>
+    <!-- header -->
+    <header>
+
+    </header>
+    <!-- /header -->
+    <!-- main -->
+    <main>
+      <h2>Le Lunghe</h2>
+      <ul class="pasta-list">
+        <?php foreach ($lunga as $pasta): ?>
+          <li>
+            <img class="pasta-img" src="{{$pasta["src"]}}" alt="">
+          </li>
+        <?php endforeach; ?>
+      </ul>
+      <h2>Le Corte</h2>
+      <ul class="pasta-list">
+        <?php foreach ($corta as $pasta): ?>
+          <li>
+            <img class="pasta-img" src="{{$pasta["src"]}}" alt="">
+          </li>
+        <?php endforeach; ?>
+      </ul>
+      <h2>Le Cortissime</h2>
+      <ul class="pasta-list">
+        <?php foreach ($cortissima as $pasta): ?>
+          <li>
+            <img class="pasta-img" src="{{$pasta["src"]}}" alt="">
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    </main>
+    <!-- /main -->
   </body>
 </html>
