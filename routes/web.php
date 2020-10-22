@@ -24,11 +24,3 @@ Route::get('/prodotti', function () {
 Route::get('/news', function () {
     return view('news');
 })->name("News");
-
-Route::get('/prodotto/show/{id}', function ($id) {
-    $data = config("pasta.$id");
-    if($data == null) {
-        abort(404);
-    }
-    return view('prodotto_singolo', ["pasta" => $data, "id" => $id]);
-})->name("show");
