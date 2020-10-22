@@ -14,13 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = config("pasta");
-    $paste = [];
-    foreach ($data as $key => $prodotto) {
-        $prodotto["id"] = $key;
-        $paste[$prodotto["tipo"]][] = $prodotto;
-    }
-    return view('home', ["paste" => $paste]);
+    return view('home');
 })->name("Home");
 
 Route::get('/prodotti', function () {
@@ -30,3 +24,11 @@ Route::get('/prodotti', function () {
 Route::get('/news', function () {
     return view('news');
 })->name("News");
+
+Route::get('/prodotto/show/{id}', function ($id) {
+    $data = config("pasta.$id");
+    if($data == null) {
+        abort(404);
+    }
+    return view('prodotto_singolo', ["pasta" => $data, "id" => $id]);
+})->name("show");
