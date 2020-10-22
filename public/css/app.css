@@ -17,6 +17,11 @@ main {
   margin: auto;
 }
 
+h2 {
+  color: blue;
+  margin-left: 40px;
+}
+
 .pasta-list {
   display: flex;
   flex-wrap: wrap;

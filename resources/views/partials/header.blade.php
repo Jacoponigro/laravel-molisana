@@ -5,9 +5,9 @@
       </div>
       <div class="header-nav">
         <ul class="nav-list">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">PRODOTTI</a></li>
-          <li><a href="#">NEWS</a></li>
+          <li><a href="{{route("Home")}}">Home</a></li>
+          <li><a href="{{route("prodotti")}}">Prodotti</a></li>
+          <li><a href="{{route("News")}}">News</a></li>
         </ul>
       </div>
     </header>

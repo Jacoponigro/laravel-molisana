@@ -23,7 +23,7 @@ foreach ($data as $pasta) {
 
 @section("main-content")
     <main>
-      <h2>Le Lunghe</h2>
+      <h2>LE LUNGHE</h2>
       <ul class="pasta-list">
         <?php foreach ($lunga as $pasta): ?>
           <li>
@@ -31,7 +31,7 @@ foreach ($data as $pasta) {
           </li>
         <?php endforeach; ?>
       </ul>
-      <h2>Le Corte</h2>
+      <h2>LE CORTE</h2>
       <ul class="pasta-list">
         <?php foreach ($corta as $pasta): ?>
           <li>
@@ -39,7 +39,7 @@ foreach ($data as $pasta) {
           </li>
         <?php endforeach; ?>
       </ul>
-      <h2>Le Cortissime</h2>
+      <h2>LE CORTISSIME</h2>
       <ul class="pasta-list">
         <?php foreach ($cortissima as $pasta): ?>
           <li>
